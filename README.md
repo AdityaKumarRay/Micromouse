@@ -10,6 +10,7 @@ Micromouse is an autonomous robot designed to navigate and solve mazes efficient
   - [Hardware Overview](#hardware-overview)
   - [PCB Design](#pcb-design)
   - [Directory Structure](#directory-structure)
+- [Achievement](#Achievement)
 
 ---
 
