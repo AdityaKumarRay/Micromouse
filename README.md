@@ -10,7 +10,10 @@ Micromouse is an autonomous robot designed to navigate and solve mazes efficient
   - [Hardware Overview](#hardware-overview)
   - [PCB Design](#pcb-design)
   - [Directory Structure](#directory-structure)
-- [Achievement](#Achievement)
+- [Algorithms](#algorithms)
+  - [Flood-Fill Algorithm](#flood-fill-algorithm)
+  - [A* Algorithm](#a-star-algorithm)
+- [Achievement](#achievement)
 
 ---
 
@@ -27,7 +30,6 @@ Micromouse is a small autonomous robot that uses sensors and algorithms to navig
 ---
 
 ## Electronics
-
 The Micromouse's electronics system is engineered to integrate seamlessly with its sensors, motor drivers, and microcontroller, ensuring precise and reliable maze navigation. All hardware designs, including schematics and PCB layouts, are provided within this repository.
 
 ### Hardware Overview
@@ -58,3 +60,42 @@ The Micromouse's electronics system is engineered to integrate seamlessly with i
     Supplementary hardware documentation, including BOM details and assembly instructions.
 
 This comprehensive electronics package is designed to support the Micromouse's advanced maze-solving capabilities, ensuring reliable operation and easy customization for robotics enthusiasts and developers alike.
+
+---
+
+## Algorithms
+The Micromouse leverages advanced pathfinding algorithms to navigate mazes efficiently. This section provides an overview of the key algorithms implemented in the system.
+
+### Flood-Fill Algorithm
+The Flood-Fill algorithm is a grid-based approach commonly used in maze-solving robots. It involves assigning values to each cell in the maze based on their distance from the destination. The robot uses these values to navigate toward the goal.
+
+- **Initialization:**  
+  The maze is initialized with high values, and the goal cell is set to zero.
+
+- **Value Propagation:**  
+  Values are propagated outward from the goal cell, incrementing by one for each step.
+
+- **Navigation:**  
+  At each intersection, the robot chooses the cell with the lowest value, ensuring it moves toward the destination efficiently.
+
+### A* Algorithm
+The A* algorithm is a heuristic-based search method that combines the benefits of Dijkstra’s algorithm and Greedy Best-First Search.
+
+- **Cost Function:**  
+  A* uses a cost function, \( f(n) = g(n) + h(n) \), where:
+  - \( g(n) \) is the cost to reach the current node.
+  - \( h(n) \) is the estimated cost from the current node to the goal.
+
+- **Heuristic:**  
+  A heuristic (e.g., Manhattan distance) guides the robot to prioritize paths that are likely to lead to the shortest solution.
+
+- **Path Optimization:**  
+  A* ensures that the robot finds the shortest path by exploring nodes with the lowest total cost.
+
+These algorithms work in tandem with the Micromouse's sensors and actuators to achieve efficient and reliable maze navigation.
+
+---
+
+## Achievement
+This project demonstrates the integration of hardware, software, and algorithms to create a fully autonomous maze-solving robot. It serves as a robust platform for learning and experimentation in robotics, offering insights into real-world applications of pathfinding and embedded systems.
+
