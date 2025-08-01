@@ -12,7 +12,6 @@ Micromouse is an autonomous robot designed to navigate and solve mazes efficient
   - [Directory Structure](#directory-structure)
 - [Algorithms](#algorithms)
   - [Flood-Fill Algorithm](#flood-fill-algorithm)
-  - [A* Algorithm](#a-star-algorithm)
 - [Achievement](#achievement)
 
 ---
@@ -77,20 +76,6 @@ The Flood-Fill algorithm is a grid-based approach commonly used in maze-solving 
 
 - **Navigation:**  
   At each intersection, the robot chooses the cell with the lowest value, ensuring it moves toward the destination efficiently.
-
-### A* Algorithm
-The A* algorithm is a heuristic-based search method that combines the benefits of Dijkstra’s algorithm and Greedy Best-First Search.
-
-- **Cost Function:**  
-  A* uses a cost function, \( f(n) = g(n) + h(n) \), where:
-  - \( g(n) \) is the cost to reach the current node.
-  - \( h(n) \) is the estimated cost from the current node to the goal.
-
-- **Heuristic:**  
-  A heuristic (e.g., Manhattan distance) guides the robot to prioritize paths that are likely to lead to the shortest solution.
-
-- **Path Optimization:**  
-  A* ensures that the robot finds the shortest path by exploring nodes with the lowest total cost.
 
 These algorithms work in tandem with the Micromouse's sensors and actuators to achieve efficient and reliable maze navigation.
 
